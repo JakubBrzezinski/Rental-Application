@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <map display_value="Impoty Book List v2 to Library">9ece67a6db7623006a08788dbf9619aa</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+// 	if(source.u_category == 'how-to') {
+// 		target.u_category = 'how to';
+// 	}
+// 	if(source.u_binding == 'Box--ed Set') {
+// 		target.u_binding = 'boxed set';
+// 	}
+// 	if(source.u_binding == 'Paper Back--' || source.u_binding == 'Paper B{ack' || source.u_binding == 'Paper Back ') {
+// 	   target.u_binding = 'paper black';
+// 	   }
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-08 11:23:17</sys_created_on>
+        <sys_id>cef15ab2dbfa23006a08788dbf9619f8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_transform_script_cef15ab2dbfa23006a08788dbf9619f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-08 11:52:12</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="work_end" label="Reserved to" language="en" table="x_291055_rental_se_rental_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>work_end</element>
+            <help/>
+            <hint>The date until this book has to be returned to the library.</hint>
+            <label>Reserved to</label>
+            <language>en</language>
+            <name>x_291055_rental_se_rental_request</name>
+            <plural>Reserved to</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-08 12:57:21</sys_created_on>
+            <sys_id>854aae72db3e23006a08788dbf9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Reserved to</sys_name>
+            <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+            <sys_update_name>sys_documentation_x_291055_rental_se_rental_request_work_end_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-08 12:57:21</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -37,6 +37,7 @@
             </choice>
         </element>
         <element label="Quantity" max_length="40" name="u_quantity" type="integer"/>
+        <element label="testing" max_length="255" name="u_testing" type="string_full_utf8"/>
         <element display="true" label="Title" mandatory="true" max_length="160" name="u_title" type="string"/>
         <index name="index">
             <element name="u_title"/>

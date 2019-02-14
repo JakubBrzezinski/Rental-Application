@@ -14,7 +14,7 @@
         <mobile_title>Books</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_291055_rental_se_book</name>
-        <order/>
+        <order>300</order>
         <override_menu_roles>true</override_menu_roles>
         <query/>
         <report/>
@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3138ab22db7623006a08788dbf9619c7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Books</sys_name>
         <sys_overrides/>
         <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
         <sys_update_name>sys_app_module_3138ab22db7623006a08788dbf9619c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-01-08 14:52:18</sys_updated_on>
+        <sys_updated_on>2019-02-11 19:52:31</sys_updated_on>
         <timeline_page/>
         <title>Books</title>
         <uncancelable>false</uncancelable>

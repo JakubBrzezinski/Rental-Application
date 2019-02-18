@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Populate Author field when a book has  an author.</description>
+        <field>u_book</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Populate Author field</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+		var authorRef = g_form.getReference('u_book', getAuthor);
+		function getAuthor(authorRef) {
+				g_form.setValue('u_author', authorRef.u_author);
+		}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-16 17:40:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9411682bdb2363006a08788dbf96197e</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Populate Author field</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_script_client_9411682bdb2363006a08788dbf96197e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-17 09:22:44</sys_updated_on>
+        <table>x_291055_rental_se_rental_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

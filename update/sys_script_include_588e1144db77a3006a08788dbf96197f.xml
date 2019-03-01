@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_291055_rental_se.getCurrentSystemTime</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getCurrentSystemTime</name>
+        <script><![CDATA[var getCurrentSystemTime = Class.create();
+getCurrentSystemTime.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getCurrentSystemTime: function() {
+		
+	var gdt = new GlideDateTime();
+	var currentTimeMs = gdt.getNumericValue();
+	return currentTimeMs;	
+	},
+		
+    type: 'getCurrentSystemTime'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-18 11:31:10</sys_created_on>
+        <sys_id>588e1144db77a3006a08788dbf96197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getCurrentSystemTime</sys_name>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_script_include_588e1144db77a3006a08788dbf96197f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-18 11:31:10</sys_updated_on>
+    </sys_script_include>
+</record_update>

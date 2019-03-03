@@ -24,11 +24,11 @@
 	if(reservedFrom != '') {
 		if (reservedFromConverted > reservedToConverted) {
 			g_form.clearValue('work_end');
-			g_form.showFieldMsg('work_end', "Reserved to date: " + reservedTo + ", can't be set before Reserved from date");
+			g_form.showFieldMsg('work_end', "Reserved to date: " + reservedTo + ", can't be set before Reserved from date", 'error');
 		}
 	} else {
 			g_form.clearValue('work_end');
-			g_form.showFieldMsg('work_end', "Please select Reserved from date first.");
+			g_form.showFieldMsg('work_end', "Please select Reserved from date first.", 'error');
 	} 
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f791624fdba323006a08788dbf961924</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Restrict reserved to date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
@@ -45,7 +45,7 @@
         <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
         <sys_update_name>sys_script_client_f791624fdba323006a08788dbf961924</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-02-18 02:07:31</sys_updated_on>
+        <sys_updated_on>2019-03-03 19:07:43</sys_updated_on>
         <table>x_291055_rental_se_rental_request</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -27,12 +27,12 @@ var reservedFromDay = dateObj.getDay(); // returns 6 for Saturday and 0 for Sund
 
 if(reservedFromDay == 0 || reservedFromDay == 6) {
 	g_form.clearValue('work_start');
-	g_form.showFieldMsg('work_start', "You can only make a reservation for a week day");
+	g_form.showFieldMsg('work_start', "You can only make a reservation for a week day", 'error');
 }
 
-else if(reservedFromConverted < reservedToConverted && reservedFrom != null || reservedFromConverted < browserDate) {
+else if(reservedFromConverted < browserDate || (reservedToConverted != '' && reservedToConverted < reservedFromConverted)) {
 	g_form.clearValue('work_start');
-	g_form.showFieldMsg('work_start', "Dates in the past as well as after the reserved to are not allowed. Please select a future date and remember that it needs to be before reserved to");
+	g_form.showFieldMsg('work_start', "Dates in the past as well as after the reserved to are not allowed. Please select a future date and remember that it needs to be before reserved to", 'error');
 }
 
 }]]></script>
@@ -42,7 +42,7 @@ else if(reservedFromConverted < reservedToConverted && reservedFrom != null || r
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4a35f73db23a3006a08788dbf96197a</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>Restrict reserved from date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
@@ -50,7 +50,7 @@ else if(reservedFromConverted < reservedToConverted && reservedFrom != null || r
         <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
         <sys_update_name>sys_script_client_f4a35f73db23a3006a08788dbf96197a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-03-01 17:46:57</sys_updated_on>
+        <sys_updated_on>2019-03-03 19:07:10</sys_updated_on>
         <table>x_291055_rental_se_rental_request</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

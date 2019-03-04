@@ -19,6 +19,10 @@ rental_se_bookUtils.prototype = Object.extendsObject(global.AbstractAjaxProcesso
 		
 		if(authorGR.next()) {
 			var author = authorGR.getValue('u_author');
+			if(author == ''){
+				var unknownAuthor = 'Unknown';
+				return unknownAuthor;
+			} else
 			return author;
 		}
 	},
@@ -29,13 +33,13 @@ rental_se_bookUtils.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-03-01 16:33:01</sys_created_on>
         <sys_id>462ec7e3db3723006a08788dbf961970</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>rental_se_bookUtils</sys_name>
         <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
         <sys_update_name>sys_script_include_462ec7e3db3723006a08788dbf961970</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-03-03 18:47:23</sys_updated_on>
+        <sys_updated_on>2019-03-03 19:16:58</sys_updated_on>
     </sys_script_include>
 </record_update>

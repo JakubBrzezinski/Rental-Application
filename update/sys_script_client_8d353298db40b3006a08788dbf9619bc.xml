@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Book Request form colour</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Change the color of all form section headers
+
+	
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-03 22:38:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8d353298db40b3006a08788dbf9619bc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Book Request form colour</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_script_client_8d353298db40b3006a08788dbf9619bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-03 22:50:50</sys_updated_on>
+        <table>x_291055_rental_se_rental_request</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>2d02c128dbc4b3006a08788dbf9619f2</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_291055_rental_se_book">
+    <x_291055_rental_se_book action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-04 08:52:43</sys_created_on>
+        <sys_id>2d02c128dbc4b3006a08788dbf9619f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-04 08:52:43</sys_updated_on>
+        <u_author>Marie Duncan / Betty Farell / Betty Farrell</u_author>
+        <u_binding>paper black</u_binding>
+        <u_category>crafts</u_category>
+        <u_quantity>246</u_quantity>
+        <u_testing/>
+        <u_title>More Ribbon Embroidery by Machine</u_title>
+    </x_291055_rental_se_book>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-04 08:56:42</sys_created_on>
+        <sys_id>33e24568dbc4b3006a08788dbf961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>More Ribbon Embroidery by Machine</sys_name>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_metadata_link_33e24568dbc4b3006a08788dbf961940</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-04 08:56:42</sys_updated_on>
+        <tablename>x_291055_rental_se_book</tablename>
+    </sys_metadata_link>
+</record_update>

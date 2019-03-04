@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>u_book</element>
+        <name>x_291055_rental_se_rental_request</name>
+        <style>color: red;&#13;
+font-weight: bold;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-04 09:26:22</sys_created_on>
+        <sys_id>01998d20db08b3006a08788dbf96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_291055_rental_se_rental_request</sys_name>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_ui_style_01998d20db08b3006a08788dbf96192f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-04 09:26:22</sys_updated_on>
+        <value>javascript:current.u_book.u_quantity &lt; 1</value>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=01998d20db08b3006a08788dbf96192f"/>
+</record_update>

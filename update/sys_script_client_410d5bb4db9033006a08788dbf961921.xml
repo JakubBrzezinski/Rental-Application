@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>state</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Change InfoMessage color</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if ((isLoading || newValue === '') || g_form.getValue('state') != '1') {
+		return;
+	}
+	var ga = new GlideAjax('rental_se_bookUtils');
+	
+	ga.addParam('sysparm_name','getBindingField');
+	ga.addParam('sysparm_book',g_form.getValue('u_book'));
+	ga.getXML(getResponse);
+	
+	
+	function getResponse(response) {
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		
+		//purple
+		if(answer.indexOf('audio') != -1 || answer.indexOf('cd') != -1){
+			g_form.addInfoMessage('<font color="purple">- Thank you for submitting this request! You will receive an email notification once your Audio Book will be ready! Happy listening!</font>');
+		//green
+		} else if(answer.indexOf('vhs') != -1) {
+			g_form.addInfoMessage('<font color="green">- Thank you for submitting this request! You will receive an email notification once your VHS Book will be ready! Happy watching!</font>');
+		//red
+		} else {
+			g_form.addInfoMessage('<font color="red">- Thank you for submitting this request! You will receive an email notification once your Book will be ready! Happy reading!</font>');
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-18 01:12:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>410d5bb4db9033006a08788dbf961921</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Change InfoMessage color</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_script_client_410d5bb4db9033006a08788dbf961921</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-18 10:47:27</sys_updated_on>
+        <table>x_291055_rental_se_rental_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

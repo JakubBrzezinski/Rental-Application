@@ -22,7 +22,7 @@
 		var ga = new GlideAjax('rental_se_bookUtils');
 		
 		ga.addParam('sysparm_name','getAuthorField');
-		ga.addParam('sysparm_book',g_form.getValue('u_book'));
+		ga.addParam('sysparm_book',newValue);
 		ga.getXML(getResponse);
 		
 		function getResponse(response) {
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9411682bdb2363006a08788dbf96197e</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Populate Author field</sys_name>
         <sys_overrides/>
         <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
         <sys_update_name>sys_script_client_9411682bdb2363006a08788dbf96197e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-03-01 17:27:54</sys_updated_on>
+        <sys_updated_on>2019-03-18 11:39:17</sys_updated_on>
         <table>x_291055_rental_se_rental_request</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

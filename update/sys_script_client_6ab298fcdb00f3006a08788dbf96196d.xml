@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Change form buttons colours</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	
+	//Change the Update to green
+	changeButtonColor('sysverb_update', '#008000');
+	//Change the Delete to red
+	changeButtonColor('sysverb_delete', '#FF0000');
+	
+	function changeButtonColor(buttonID, backgroundColor) {
+		try{
+			//Find the button(s) by ID and change the background color
+			$$('button[id=' + buttonID + ']').each(function(elmt) {
+				elmt.style.backgroundColor = backgroundColor;
+				//elmt.style.borderRadius = '20%';
+				elmt.style.fontWeight = 'bold';
+				elmt.style.boxShadow = '3px 3px 5px 0px #616161';
+				elmt.style.border = '0';
+				elmt.style.color = '#ffffff'; //make the button text white
+				console.error(Object.keys(elmt.style));
+			});
+		}catch(e)
+		{
+			alert('check me out:' + e);
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-05 00:04:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6ab298fcdb00f3006a08788dbf96196d</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>Change form buttons colours</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_script_client_6ab298fcdb00f3006a08788dbf96196d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-06 20:49:31</sys_updated_on>
+        <table>x_291055_rental_se_rental_request</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

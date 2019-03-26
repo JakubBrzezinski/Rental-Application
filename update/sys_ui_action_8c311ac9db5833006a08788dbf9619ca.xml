@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>list_books</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Books Requested</name>
+        <onclick>openNewWindow()</onclick>
+        <order>150</order>
+        <script><![CDATA[function openNewWindow(){
+	var userID = g_user.userID;
+	var test = ['req1', 'req2', 'req3'];
+	var displayWindow = g_navigation.openPopup('about:blank', '_self');
+	var windowElement = displayWindow.document;
+	var title = 'Your Book Requests:';
+	var headerStyle = 'style = "background-color:powderblue; text-align: center; font-size: 20px;"';
+	var loaderStyle = '<style> #loader {   position: absolute;   left: 50%;   top: 50%;   z-index: 1;   width: 150px;   height: 150px;   margin: -75px 0 0 -75px;   border: 16px solid #f3f3f3;   border-radius: 50%;   border-top: 16px solid #3498db;   width: 120px;   height: 120px;   -webkit-animation: spin 2s linear infinite;   animation: spin 2s linear infinite; @-webkit-keyframes spin {   0% { -webkit-transform: rotate(0deg); }   100% { -webkit-transform: rotate(360deg); } @keyframes spin {   0% { transform: rotate(0deg); }   100% { transform: rotate(360deg); } /* Add animation to "page content" */ .animate-bottom {   position: relative;   -webkit-animation-name: animatebottom;   -webkit-animation-duration: 1s;   animation-name: animatebottom;   animation-duration: 1s @-webkit-keyframes animatebottom {   from { bottom:-100px; opacity:0 }    to { bottom:0px; opacity:1 } @keyframes animatebottom {    from{ bottom:-100px; opacity:0 }    to{ bottom:0; opacity:1 } #myDiv {   display: none;   text-align: center; </style>';
+		
+		
+		var onLoad = '<div onload="getResponse()" style="margin:0;">';
+		var listDiv = '<div style="display:none;" id="myDiv" class="animate-bottom">';
+		
+		windowElement.write('<div id="header"' + headerStyle + '>' + title +'</div>');
+		windowElement.write(loaderStyle);
+		windowElement.write('<div id="loader"> </div>');
+		
+		var ga = new GlideAjax('rental_se_bookUtils');
+		
+		ga.addParam('sysparm_name', 'getRequestedBooksList');
+		ga.addParam('sysparm_userID', userID);
+		ga.getXML(getResponse);
+		
+		function getResponse(response) {
+			var answer = response.responseXML.documentElement.getAttribute("answer").toString();
+			var requestedBooks = JSON.parse(answer);
+			for(var i = 0; i < requestedBooks.length; i++) {
+				console.error(requestedBooks[i].link);
+				var currentRecord = ' - ' + requestedBooks[i].title + ' - ' + requestedBooks[i].author + ' - ' + requestedBooks[i].requestedBy + ' - Please do not forget to return book before: ' + requestedBooks[i].requestedDate;
+				windowElement.write('<p id="req'+ i +'"> <a href="' + requestedBooks[i].link +'" target="_blank">' + requestedBooks[i].number + '</a>'+ currentRecord + '<p>');
+			}
+			windowElement.write('</div>');
+		}
+	}
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-18 14:12:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c311ac9db5833006a08788dbf9619ca</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>Books Requested</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Rental Services" source="x_291055_rental_se">6e4592a2dbb223006a08788dbf961972</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Rental Services">6e4592a2dbb223006a08788dbf961972</sys_scope>
+        <sys_update_name>sys_ui_action_8c311ac9db5833006a08788dbf9619ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-26 15:07:34</sys_updated_on>
+        <table>x_291055_rental_se_rental_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
